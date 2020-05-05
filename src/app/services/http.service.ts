@@ -22,7 +22,7 @@ export class HttpService {
     return this.HttpClient.post(url, body, this.httpOptions)
   }
 
-  public get(url: string, token: any) {
+  public get(url: string, token: string) {
     return this.HttpClient.get(url, {
       headers: new HttpHeaders({
         'Access-Control-Allow-Origin': '*',
@@ -32,11 +32,9 @@ export class HttpService {
   }
 
   public token(): void {
-    let token = localStorage.getItem('token');
-    if (token) {
-      this.get('/api/access', token).toPromise().catch(err => {
-        this.router.navigate(['/'])
-      })
-    } else this.router.navigate(['/']);
+    const token = localStorage.getItem('token');
+    this.get('/api/access', token).toPromise().catch(err => {
+      this.router.navigate(['/'])
+    })
   }
 }

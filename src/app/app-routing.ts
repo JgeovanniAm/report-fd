@@ -8,12 +8,12 @@ import { SignComponent } from './components/main/sign/sign.component';
 
 const APP_ROUTES: Routes = [
   {
-    path:'home',
-    component: HomeComponent,
-  },
-  {
     path:'',
     component: SignComponent,
+  },
+  {
+    path:'home',
+    component: HomeComponent,
   },
   {
     path:'dashboard',

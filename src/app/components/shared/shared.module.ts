@@ -4,11 +4,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ModalComponent } from './modal/modal.component';
+import { SliderComponent } from './slider/slider.component';
+import { PanelDashboardComponent } from './panel-dashboard/panel-dashboard.component';
+import { FormPanelComponent } from './form-panel/form-panel.component';
 
 @NgModule({
   declarations: [
   HeaderComponent,
   ModalComponent,
+  SliderComponent,
+  PanelDashboardComponent,
+  FormPanelComponent,
 ],
   imports: [
     CommonModule,
@@ -18,7 +24,10 @@ import { ModalComponent } from './modal/modal.component';
   ],
   exports: [
     HeaderComponent,
-    ModalComponent
+    ModalComponent,
+    SliderComponent,
+    PanelDashboardComponent,
+    FormPanelComponent
   ],
   providers: [],
   bootstrap: []

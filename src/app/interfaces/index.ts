@@ -4,6 +4,12 @@ export interface IResponse {
 }
 
 export interface Imodal {
-  status: boolean
-  message: string
+  description: string
+  title: string
+}
+export enum EnumType {
+  AHORRO,
+  GASTO,
+  SALARIO,
+  IGRESON
 }

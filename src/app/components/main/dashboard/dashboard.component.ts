@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { HttpService } from 'src/app/services/http.service';
+import gql from 'graphql-tag'
+import { Apollo } from 'apollo-angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +10,24 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class DashboardComponent implements OnInit {
   constructor(
-    private router: Router,
+    private apollo: Apollo,
     private HttpService: HttpService
   ) {
     this.HttpService = HttpService
   }
 
   ngOnInit() {
-    this.HttpService.token()
+    this.HttpService.token();
+    this.apollo.query({
+      query: gql `
+        {
+          incomeByMonths {
+                  title
+              }
+        }
+      `
+    }).subscribe(data => {
+      console.log(data)
+    })
   }
 }

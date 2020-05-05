@@ -1,4 +1,4 @@
-import { Component, OnInit, Input , OnChanges, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Imodal } from '../../../interfaces';
 
 @Component({
@@ -7,19 +7,18 @@ import { Imodal } from '../../../interfaces';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-  @Input() displayModal:boolean;
-  @Input() message: {}
-  @Output() closeModalEventEmit: EventEmitter<boolean>
+  @Input() displayModal: boolean;
+  @Input() message: Imodal;
+  @Output() closeModalEventEmit: EventEmitter<boolean>;
 
-  constructor(){
+  constructor() {
     this.closeModalEventEmit = new EventEmitter()
   }
 
   ngOnInit() {
-    console.log(this.message)
   }
 
-  close():void {
+  close(): void {
     this.displayModal = false;
     this.closeModalEventEmit.emit(this.displayModal)
   }

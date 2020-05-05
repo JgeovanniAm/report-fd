@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  handleToggle(element:HTMLElement): void {
+  handleClickLinks(element:HTMLElement): void {
     this.toggle = !this.toggle
     element.className = this.toggle ? "collapse navbar-collapse nav-toggle" : "collapse navbar-collapse" ;
   }
