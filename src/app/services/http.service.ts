@@ -18,11 +18,11 @@ export class HttpService {
     private router: Router
   ) { }
 
-  public post(url: string, body: any): Observable<Object> {
+  post(url: string, body: any): Observable<Object> {
     return this.HttpClient.post(url, body, this.httpOptions)
   }
 
-  public get(url: string, token: string) {
+  get(url: string, token: string) {
     return this.HttpClient.get(url, {
       headers: new HttpHeaders({
         'Access-Control-Allow-Origin': '*',
@@ -31,7 +31,7 @@ export class HttpService {
     })
   }
 
-  public token(): void {
+  token(): void {
     const token = localStorage.getItem('token');
     this.get('/api/access', token).toPromise().catch(err => {
       this.router.navigate(['/'])

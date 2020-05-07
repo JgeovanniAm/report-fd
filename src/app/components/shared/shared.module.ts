@@ -7,6 +7,8 @@ import { ModalComponent } from './modal/modal.component';
 import { SliderComponent } from './slider/slider.component';
 import { PanelDashboardComponent } from './panel-dashboard/panel-dashboard.component';
 import { FormPanelComponent } from './form-panel/form-panel.component';
+import { AlertComponent } from './alert/alert.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { FormPanelComponent } from './form-panel/form-panel.component';
   SliderComponent,
   PanelDashboardComponent,
   FormPanelComponent,
+  AlertComponent,
+  LoaderComponent,
 ],
   imports: [
     CommonModule,
@@ -27,7 +31,9 @@ import { FormPanelComponent } from './form-panel/form-panel.component';
     ModalComponent,
     SliderComponent,
     PanelDashboardComponent,
-    FormPanelComponent
+    FormPanelComponent,
+    LoaderComponent,
+    AlertComponent
   ],
   providers: [],
   bootstrap: []

@@ -5,7 +5,6 @@
   <ul class="list-group">
     <li class="item active"><button style="color: black;" #selfExpe id="expense" (click)="handleClick(selfExpe)">create expense</button></li>
     <li class="item"><button #self id="incomeBymonth" (click)="handleClick(self)">income by month</button></li>
-    <li class="item"><button #selfDelete id="deleteIncomeByMonth" (click)="handleClick(selfDelete)">delete income by month</button></li>
   </ul>
   <div *ngIf="formState === 'expense' || formState === 'incomeBymonth'" class="container display-form">
     <app-form-panel [formState]="formState"></app-form-panel>

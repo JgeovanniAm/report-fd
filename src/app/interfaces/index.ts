@@ -8,8 +8,23 @@ export interface Imodal {
   title: string
 }
 export enum EnumType {
-  AHORRO,
-  GASTO,
+  PAGOS,
   SALARIO,
-  IGRESON
+  PRESTAMO,
+  PERSONAL,
+  BONO,
+  OTRO
+}
+
+export interface IIncomeBymonth {
+  title: string
+  CRC: string
+  descript: string
+  type: EnumType
+}
+
+export interface IExpense extends IIncomeBymonth{
+  type: EnumType
+  date: Date
+  month: number
 }

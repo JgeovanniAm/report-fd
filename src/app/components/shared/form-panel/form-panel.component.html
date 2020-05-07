@@ -18,15 +18,15 @@
     <div class="form-group">
       <label for="topic">{{formState === "expense" ? "Type expense" : "Type Income" }}</label>
       <select *ngIf='formState ==="expense"' aria-placeholder="select type expense" required #topic="ngModel" class="custom-select" [class.is-invalid]="topic.invalid && topic.touched" name="topic" [ngModel] id="topic">
-        <option value="default">personal</option>
-        <option>pagos</option>
-        <option>prestamos</option>
-        <option>otros</option>
+        <option value="default">{{typeItem[3]}}</option>
+        <option>{{typeItem[1]}}</option>
+        <option>{{typeItem[2]}}</option>
+        <option>{{typeItem[5]}}</option>
       </select>
       <select *ngIf='formState !=="expense"' aria-placeholder="select type expense" required #topic="ngModel" class="custom-select" [class.is-invalid]="topic.invalid && topic.touched" name="topic" [ngModel] id="topic">
-        <option value="default">Salario</option>
-        <option>Bono</option>
-        <option>Otro</option>
+        <option value="default">{{typeItem[1]}}</option>
+        <option>{{typeItem[4]}}</option>
+        <option>{{typeItem[5]}}</option>
       </select>
     </div>
     <div class="form-group">
@@ -35,7 +35,14 @@
         name="expenseElem" type="number" class="form-control" id="expense" aria-describedby="expense input"
         placeholder="Enter your expenseElem">
     </div>
+    <div class="form-group">
+      <label for="date">Date</label>
+      <input #dateinput="ngModel" required [class.is-invalid]="dateinput.invalid && dateinput.touched" [ngModel]
+      name="dateinput" type="date" class="form-control">
+    </div>
     <button type="submit" class="btn">Submit</button>
   </form>
 </div>
 <app-modal  [message]="message"  [displayModal]="displayModal" (closeModalEventEmit)="closeModal($event)"></app-modal>
+<app-alert [item]="item"  [displayAlert]="displayAlert" (closeAlertEventEmit)="closeAlert($event)" ></app-alert>
+<app-loader [load]="load"></app-loader>

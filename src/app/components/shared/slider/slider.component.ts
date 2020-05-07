@@ -15,7 +15,6 @@ export class SliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.getDateSlider())
   }
 
   handleClickSettings(): void {
@@ -26,7 +25,7 @@ export class SliderComponent implements OnInit {
     this.showPanel = event
   }
 
-  previousDateSlider():void {
+  previousDateSlider(): void {
     this.currentMonth === 0 ? this.currentMonth = 11 : this.currentMonth--;
     if (this.currentMonth == 11) this.currentYear -= 1;
   }

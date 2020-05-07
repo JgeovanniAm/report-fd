@@ -11,6 +11,7 @@ import { HttpService } from '../../../services/http.service';
 })
 export class SignComponent implements OnInit {
   public displayModal: boolean = false;
+  public load = false
   public message: Imodal = {
     title: 'password and user incorrect',
     description: 'it has happened a error accessing your user and password'
@@ -36,14 +37,17 @@ export class SignComponent implements OnInit {
   }
 
   public handleSubmit({ value }: FormGroup): void {
+    this.load = true
     this.HttpService.post(
       '/api/admin',
       { user: value.userInput, password: value.passwordInput },
     ).toPromise()
     .then((result: IResponse) => {
       this.getToken(result);
+      this.load = false;
     }).catch(err => {
-      this.displayModal = true
+      this.displayModal = true;
+      this.load = false;
     })
   }
 

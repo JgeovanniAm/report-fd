@@ -1,0 +1,13 @@
+.show-alert {
+  display: block;
+}
+
+.alert-position {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.alert-heading {
+  margin: 10px;
+}
