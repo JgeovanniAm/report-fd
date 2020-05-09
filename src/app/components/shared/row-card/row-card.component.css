@@ -1,0 +1,26 @@
+.modal {
+  display: block;
+}
+
+.card {
+  height: 100vh;
+  
+}
+
+.card-header {
+  background: rgba(0,0,0,.125);
+}
+
+.card-header p {
+  color: black;
+  text-align: center;
+}
+
+.controls {
+  margin: 10px 0;
+}
+
+.controls button {
+  margin: 0 10px;
+  width: 100px;
+}

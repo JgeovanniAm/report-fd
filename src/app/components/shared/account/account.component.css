@@ -1,0 +1,7 @@
+tbody .incomes .usd {
+  color: rgb(1, 160, 1);
+}
+
+tbody .expense .usd {
+  color: red;
+}

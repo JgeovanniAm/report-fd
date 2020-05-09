@@ -28,7 +28,7 @@ export class FormPanelComponent implements OnInit {
     this.providergqlService = providergqlService
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   handleSubmit(form: FormGroup): void {
     let { topic, description, expenseElem, titleElem, dateinput } = form.value;
@@ -39,7 +39,6 @@ export class FormPanelComponent implements OnInit {
         descript: description,
         CRC: expenseElem.toString(),
         title: titleElem,
-        month: new Date().getMonth(),
         date: new Date(dateinput)
       }
       this.formState === "expense" ? this.createExpen(item) : this.createIncome(item);
@@ -68,7 +67,7 @@ export class FormPanelComponent implements OnInit {
 
   closeAlert(event: boolean): void {
     this.displayAlert = event;
-    }
+  }
 
   closeModal(event: boolean): void { // change state from child component
     this.displayModal = event;

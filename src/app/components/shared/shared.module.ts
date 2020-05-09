@@ -9,6 +9,9 @@ import { PanelDashboardComponent } from './panel-dashboard/panel-dashboard.compo
 import { FormPanelComponent } from './form-panel/form-panel.component';
 import { AlertComponent } from './alert/alert.component';
 import { LoaderComponent } from './loader/loader.component';
+import { AccountComponent } from './account/account.component';
+import { RowCardComponent } from './row-card/row-card.component';
+import { LoadcountComponent } from './loadcount/loadcount.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { LoaderComponent } from './loader/loader.component';
   FormPanelComponent,
   AlertComponent,
   LoaderComponent,
+  AccountComponent,
+  RowCardComponent,
+  LoadcountComponent,
 ],
   imports: [
     CommonModule,

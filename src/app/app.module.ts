@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ApolloLink, concat } from 'apollo-link';
-import { setContext } from 'apollo-link-context';
 import { InMemoryCache } from 'apollo-cache-inmemory'
 // modules
 import { app_routing } from './app-routing';
@@ -55,12 +54,3 @@ export class AppModule {
     });
   }
 }
-
-/**
- * 
-    apollo.create({
-      link: httpLink.create({uri:'/api/reportgl'}),
-      cache: new InMemoryCache()
-    });
-  }
- */

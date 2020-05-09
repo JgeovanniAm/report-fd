@@ -6,6 +6,10 @@
   </div>
   <div class="jumbotron">
     <button (click)="handleClickSettings(panel)" class="settings"><img src="assets/settings.svg" alt=""></button>
+    <div class="content">
+      <app-loadcount *ngIf="load"></app-loadcount>
+      <app-account (refreshRequest)="closeCardAccounts($event)" [dataMonth]="statusDataMonth"></app-account>
+    </div>
   </div>
 </div>
 <app-panel-dashboard *ngIf="showPanel" [showPanel]="showPanel" (closePanelEventEmit)="closePanel($event)">

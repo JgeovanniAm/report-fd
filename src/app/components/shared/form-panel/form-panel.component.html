@@ -19,7 +19,6 @@
       <label for="topic">{{formState === "expense" ? "Type expense" : "Type Income" }}</label>
       <select *ngIf='formState ==="expense"' aria-placeholder="select type expense" required #topic="ngModel" class="custom-select" [class.is-invalid]="topic.invalid && topic.touched" name="topic" [ngModel] id="topic">
         <option value="default">{{typeItem[3]}}</option>
-        <option>{{typeItem[1]}}</option>
         <option>{{typeItem[2]}}</option>
         <option>{{typeItem[5]}}</option>
       </select>

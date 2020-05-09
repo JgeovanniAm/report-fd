@@ -10,6 +10,11 @@
   letter-spacing: 3px;
 }
 
+.content {
+  padding: 15px 0;
+  position: relative;
+}
+
 .arrow {
   background: none;
   width: 35px;
@@ -50,6 +55,6 @@
 
 .jumbotron {
   position: relative;
-  background:rgb(247, 247, 247);
+  background:rgb(255, 255, 255);
   box-shadow: 1px 1px 6px rgb(180, 180, 180);
 }

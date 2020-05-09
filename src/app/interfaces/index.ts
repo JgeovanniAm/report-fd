@@ -26,5 +26,4 @@ export interface IIncomeBymonth {
 export interface IExpense extends IIncomeBymonth{
   type: EnumType
   date: Date
-  month: number
 }

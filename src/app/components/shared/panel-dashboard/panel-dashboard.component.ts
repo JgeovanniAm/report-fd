@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-panel-dashboard',
@@ -11,13 +12,15 @@ export class PanelDashboardComponent implements OnInit {
 
   public formState: string = 'expense';
 
-  constructor() {
+  constructor(
+    private router: Router,
+  ) {
     this.closePanelEventEmit = new EventEmitter()
   }
 
   ngOnInit() { }
 
-  resetClass(): void {
+  private resetClass(): void {
     Array.from(document.querySelectorAll('.item >  button')).forEach((item: HTMLElement) => {
       item.style.color = "rgb(177, 177, 177)";
     })
