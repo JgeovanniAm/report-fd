@@ -1,0 +1,14 @@
+.btn {
+  background: black;
+  color: #f8f9fa;
+  font-weight: bold;
+  display: none;
+}
+
+label {
+  color:  rgb(146, 146, 146);
+}
+
+.btn-invalid {
+  display: block;
+}

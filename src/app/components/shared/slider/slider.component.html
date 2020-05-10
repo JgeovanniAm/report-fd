@@ -1,0 +1,16 @@
+<div class="slider">
+  <div class="subheader">
+    <button (click)="previousDateSlider()" class="arrow"><img src="assets/back.svg" alt=""></button>
+    <h2 class="subheader__month">{{ getDateSlider() }}</h2>
+    <button (click)="nextDateSlider()" class="arrow"><img src="assets/next.svg" alt=""></button>
+  </div>
+  <div class="jumbotron">
+    <button (click)="handleClickSettings(panel)" class="settings"><img src="assets/settings.svg" alt=""></button>
+    <div class="content">
+      <app-loadcount *ngIf="load"></app-loadcount>
+      <app-account (refreshRequest)="closeCardAccounts($event)" [dataMonth]="statusDataMonth"></app-account>
+    </div>
+  </div>
+</div>
+<app-panel-dashboard *ngIf="showPanel" [showPanel]="showPanel" (closePanelEventEmit)="closePanel($event)">
+</app-panel-dashboard>

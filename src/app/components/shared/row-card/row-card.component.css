@@ -1,0 +1,36 @@
+.modal {
+  display: block;
+  width: 95% ;
+  margin: 0 auto;
+  top: 25px;
+  height: 450px !important;
+  position: fixed;
+  overflow: auto;
+  box-shadow: 1px 1px 10px black;
+  background: white;
+}
+
+.card {
+  width: 100%;
+  border: 0;
+}
+
+.card-header {
+  background: rgba(0,0,0,.125);
+}
+
+.card-header p {
+  color: black;
+  text-align: center;
+}
+
+.controls {
+  padding: 10px 0;
+  border: 0px;
+}
+
+.controls button {
+  margin: 0 10px;
+  width: 100px;
+  padding: 5px;
+}

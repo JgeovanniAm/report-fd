@@ -1,0 +1,9 @@
+.jumbotron {
+  background: white;
+}
+
+.btn {
+  background: rgb(0, 0, 0);
+  color: #f8f9fa;
+  font-weight: bold;
+}
