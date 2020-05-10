@@ -2,7 +2,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/main/home/home.component';
 import { DashboardComponent } from './components/main/dashboard/dashboard.component';
 import { BillComponent } from './components/main/bill/bill.component';
-import { SavingComponent } from './components/main/saving/saving.component';
 import { SignComponent } from './components/main/sign/sign.component';
 
 
@@ -22,10 +21,6 @@ const APP_ROUTES: Routes = [
   {
     path:'bill',
     component: BillComponent,
-  },
-  {
-    path:'saving',
-    component: SavingComponent,
   },
   {
     path: '**',

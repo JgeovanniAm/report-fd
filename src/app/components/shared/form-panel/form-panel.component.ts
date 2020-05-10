@@ -31,8 +31,9 @@ export class FormPanelComponent implements OnInit {
   ngOnInit() { }
 
   handleSubmit(form: FormGroup): void {
-    let { topic, description, expenseElem, titleElem, dateinput } = form.value;
+    const { topic, description, expenseElem, titleElem, dateinput } = form.value;
     if (form.valid) {
+      form.reset(); // reset value of main form
       this.load = true // active load
       const item = { // items to push 
         type: topic,
@@ -43,7 +44,6 @@ export class FormPanelComponent implements OnInit {
       }
       this.formState === "expense" ? this.createExpen(item) : this.createIncome(item);
     } else this.displayModal = true;
-    form.reset()
   }
 
   private createExpen(item: IExpense): void {

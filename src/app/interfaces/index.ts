@@ -13,7 +13,8 @@ export enum EnumType {
   PRESTAMO,
   PERSONAL,
   BONO,
-  OTRO
+  OTRO,
+  AHORRO
 }
 
 export interface IIncomeBymonth {

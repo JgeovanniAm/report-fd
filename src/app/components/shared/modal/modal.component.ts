@@ -18,7 +18,7 @@ export class ModalComponent implements OnInit {
   ngOnInit() {
   }
 
-  close(): void {
+  closeModal(): void {
     this.displayModal = false;
     this.closeModalEventEmit.emit(this.displayModal)
   }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { ProvidergqlService } from 'src/app/services/providergql.service';
 import { IExpense, IIncomeBymonth } from 'src/app/interfaces';
 
 interface IstatusData {

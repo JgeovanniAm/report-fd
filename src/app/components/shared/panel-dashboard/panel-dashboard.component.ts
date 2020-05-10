@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-panel-dashboard',
@@ -9,12 +8,9 @@ import { Router } from '@angular/router';
 export class PanelDashboardComponent implements OnInit {
   @Input() public showPanel: boolean;
   @Output() private closePanelEventEmit: EventEmitter<boolean>;
-
   public formState: string = 'expense';
 
-  constructor(
-    private router: Router,
-  ) {
+  constructor() {
     this.closePanelEventEmit = new EventEmitter()
   }
 
@@ -32,8 +28,7 @@ export class PanelDashboardComponent implements OnInit {
     e.style.color = "black";
   }
 
-  close(): void {
-    this.showPanel = !this.showPanel
-    this.closePanelEventEmit.emit(this.showPanel)
+  closePanel(): void {
+    this.closePanelEventEmit.emit(!this.showPanel)
   }
 }

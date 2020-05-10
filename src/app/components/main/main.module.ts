@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { BillComponent } from './bill/bill.component';
-import { SavingComponent } from './saving/saving.component';
 import { SignComponent } from './sign/sign.component';
 // modules
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,7 +14,6 @@ import { app_routing } from '../../app-routing';
     DashboardComponent,
     HomeComponent,
     BillComponent,
-    SavingComponent,
     SignComponent,
   ],
   imports: [
@@ -28,7 +26,6 @@ import { app_routing } from '../../app-routing';
     DashboardComponent,
     HomeComponent,
     BillComponent,
-    SavingComponent,
     SignComponent,
     FormsModule,
     ReactiveFormsModule

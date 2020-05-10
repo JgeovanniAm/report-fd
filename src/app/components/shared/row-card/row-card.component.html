@@ -13,13 +13,13 @@
       <li class="list-group-item">
         <p>USD: {{data_card.CRC}}</p>
       </li>
-      <li class="list-group-item">
+      <li class="list-group-item" style="border: 0px">
         <p>Date: {{data_card.date}}</p>
       </li>
     </ul>
-    <div class="controls">
-      <button type="button" class="btn btn-secondary" (click)="close()" data-dismiss="modal">Close</button>
-      <button type="button" (click)="deleteItem()" class="btn btn-primary">delete</button>
-    </div>
+  </div>
+  <div class="controls">
+    <button type="button" class="btn btn-secondary" (click)="closeModalCard()" data-dismiss="modal">Close</button>
+    <button type="button" (click)="deleteItemCard()" class="btn btn-danger">delete</button>
   </div>
 </div>

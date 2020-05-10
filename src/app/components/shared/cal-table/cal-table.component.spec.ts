@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SavingComponent } from './saving.component';
+import { CalTableComponent } from './cal-table.component';
 
-describe('SavingComponent', () => {
-  let component: SavingComponent;
-  let fixture: ComponentFixture<SavingComponent>;
+describe('CalTableComponent', () => {
+  let component: CalTableComponent;
+  let fixture: ComponentFixture<CalTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SavingComponent ]
+      declarations: [ CalTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SavingComponent);
+    fixture = TestBed.createComponent(CalTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

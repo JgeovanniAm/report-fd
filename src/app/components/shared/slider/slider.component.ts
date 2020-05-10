@@ -42,7 +42,7 @@ export class SliderComponent implements OnInit {
     const currentdate: Date = new Date(`${this.currentYear}-${this.currentMonth + 1}-${new Date().getDate()}`)
     this.providergqlService.getAllbyMonth(currentdate).valueChanges
       .subscribe(({ data }: any) => {
-        this.load = false
+        this.load = false;
         this.statusDataMonth = data.statusMonth;
       })
   }
@@ -60,6 +60,7 @@ export class SliderComponent implements OnInit {
   }
 
   getDateSlider(): string {
-    return `${this.month[this.currentMonth]} ${this.currentYear}`;
+    const year = this.currentYear.toString().substr(2,4)
+    return `${this.month[this.currentMonth]} ${year}`;
   }
 }

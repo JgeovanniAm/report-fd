@@ -8,6 +8,9 @@
   display: flex;
   flex-direction: column;
   padding: 5px;
+  height: 100%;
+  padding-bottom: 30px;
+  overflow: auto;
 }
 
 .close {
@@ -36,7 +39,6 @@
   display: block;
   font-size: 16px;
 }
-
 
 .display-form {
   margin-top: 30px;

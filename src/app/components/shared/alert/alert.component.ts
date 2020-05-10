@@ -17,7 +17,7 @@ export class AlertComponent implements OnInit {
   ngOnInit() {
   }
 
-  close(): void {
+  closeAlert(): void {
     this.displayAlert = false;
     this.closeAlertEventEmit.emit(this.displayAlert)
   }

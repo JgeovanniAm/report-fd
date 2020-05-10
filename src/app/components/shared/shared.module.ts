@@ -12,6 +12,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { AccountComponent } from './account/account.component';
 import { RowCardComponent } from './row-card/row-card.component';
 import { LoadcountComponent } from './loadcount/loadcount.component';
+import { CalTableComponent } from './cal-table/cal-table.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoadcountComponent } from './loadcount/loadcount.component';
   AccountComponent,
   RowCardComponent,
   LoadcountComponent,
+  CalTableComponent,
 ],
   imports: [
     CommonModule,

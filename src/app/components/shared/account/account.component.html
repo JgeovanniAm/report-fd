@@ -16,4 +16,5 @@
     </tr>
   </tbody>
 </table>
+<app-cal-table *ngIf="getData()" [result_byMonth]="getData()" ></app-cal-table>
 <app-row-card *ngIf="data_row" (closeEmit)="closeCard($event)" [data_card]="data_row"></app-row-card>
