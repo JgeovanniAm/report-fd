@@ -8,13 +8,13 @@ export interface Imodal {
   title: string
 }
 export enum EnumType {
-  PAGOS,
-  SALARIO,
-  PRESTAMO,
-  PERSONAL,
-  BONO,
-  OTRO,
-  AHORRO
+  PAGOS="PAGOS",
+  SALARIO="SALARIO",
+  PRESTAMO="PRESTAMO",
+  PERSONAL="PERSONAL",
+  BONO="BONO",
+  OTRO="OTRO",
+  AHORRO="AHORRO"
 }
 
 export interface IIncomeBymonth {

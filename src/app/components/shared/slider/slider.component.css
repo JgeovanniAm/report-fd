@@ -1,13 +1,13 @@
 .subheader {
   display: flex;
-  margin: 15px 0;
   justify-content: center;
+  margin: 15px 0;
 }
 
 .subheader__month {
-  margin: 5px;
   font-weight: normal;
   letter-spacing: 3px;
+  margin: 5px;
 }
 
 .content {
@@ -17,19 +17,19 @@
 
 .arrow {
   background: none;
-  width: 35px;
   border: 0;
   margin: 10px 20px;
+  width: 35px;
 }
 
 .settings {
-  opacity: .6;
   background: none;
-  width: 35px;
   border: 0;
+  opacity: .6;
   position: absolute;
-  top: 10px;
   right: 10px;
+  top: 10px;
+  width: 35px;
 }
 
 .settings img {
@@ -44,8 +44,8 @@
   }
 
   .settings {
-    top: 20px;
     right: 20px;
+    top: 20px;
   }
 
   .arrow {
@@ -54,7 +54,7 @@
 }
 
 .jumbotron {
-  position: relative;
   background:rgb(255, 255, 255);
   box-shadow: 1px 1px 6px rgb(180, 180, 180);
+  position: relative;
 }

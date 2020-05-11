@@ -1,8 +1,8 @@
 .btn {
   background: black;
   color: #f8f9fa;
-  font-weight: bold;
   display: none;
+  font-weight: bold;
 }
 
 label {

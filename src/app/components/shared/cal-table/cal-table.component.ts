@@ -24,7 +24,7 @@ export class CalTableComponent implements OnInit {
 
   resultBymonth(): number {
     const {incomes, expenses} = this.result_byMonth;
-    return this.calculatebyMonth(incomes) - this.calculatebyMonth(expenses);
+    return Math.abs(this.calculatebyMonth(incomes) - this.calculatebyMonth(expenses));
   }
 
 }

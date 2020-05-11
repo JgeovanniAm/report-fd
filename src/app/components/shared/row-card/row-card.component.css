@@ -1,13 +1,13 @@
 .modal {
-  display: block;
-  width: 95% ;
-  margin: 0 auto;
-  top: 25px;
-  height: 450px !important;
-  position: fixed;
-  overflow: auto;
-  box-shadow: 1px 1px 10px black;
   background: white;
+  box-shadow: 1px 1px 10px black;
+  display: block;
+  height: 450px !important;
+  margin: 0 auto;
+  overflow: auto;
+  position: fixed;
+  top: 25px;
+  width: 95% ;
 }
 
 .card {
@@ -31,6 +31,6 @@
 
 .controls button {
   margin: 0 10px;
-  width: 100px;
   padding: 5px;
+  width: 100px;
 }

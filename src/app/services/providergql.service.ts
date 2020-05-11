@@ -92,6 +92,7 @@ export class ProvidergqlService {
       errorPolicy: 'ignore',
     })
   }
+
   getAllbyMonth(dateProp: Date): QueryRef<IExpense & IIncomeBymonth> {
     return this.apollo.watchQuery({
       query: gql`
@@ -119,6 +120,29 @@ export class ProvidergqlService {
       variables: {
         date: dateProp
       },
+      fetchPolicy: 'no-cache',
+      errorPolicy: 'ignore',
+    })
+  }
+
+  getAllIncomeAndExpense(): QueryRef<Object> {
+    return this.apollo.watchQuery({
+      query: gql`
+        query {
+          incomeByMonths {
+            type
+            title
+            CRC
+            date
+          }
+          expenses {
+            type
+            title
+            CRC
+            date
+          }
+        }
+        `,
       fetchPolicy: 'no-cache',
       errorPolicy: 'ignore',
     })

@@ -1,7 +1,7 @@
 .cal {
   display: flex;
-  padding: 0 10px;
   justify-content: flex-start;
+  padding: 0 10px;
 }
 
 .cal p {

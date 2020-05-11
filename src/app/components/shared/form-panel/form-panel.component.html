@@ -19,16 +19,16 @@
       <label for="topic">{{formState === "expense" ? "Type expense" : "Type Income" }}</label>
       <select *ngIf='formState ==="expense"' aria-placeholder="select type expense" required #topic="ngModel"
         class="custom-select" [class.is-invalid]="topic.invalid && topic.touched" name="topic" [ngModel] id="topic">
-        <option>{{typeItem[3]}}</option>
-        <option>{{typeItem[2]}}</option>
-        <option>{{typeItem[6]}}</option>
-        <option>{{typeItem[5]}}</option>
+        <option>{{typeItem.PERSONAL}}</option>
+        <option>{{typeItem.PRESTAMO}}</option>
+        <option>{{typeItem.AHORRO}}</option>
+        <option>{{typeItem.OTRO}}</option>
       </select>
       <select *ngIf='formState !=="expense"' aria-placeholder="select type expense" required #topic="ngModel"
         class="custom-select" [class.is-invalid]="topic.invalid && topic.touched" name="topic" [ngModel] id="topic">
-        <option>{{typeItem[1]}}</option>
-        <option>{{typeItem[4]}}</option>
-        <option>{{typeItem[5]}}</option>
+        <option>{{typeItem.SALARIO}}</option>
+        <option>{{typeItem.BONO}}</option>
+        <option>{{typeItem.OTRO}}</option>
       </select>
     </div>
     <div class="form-group">

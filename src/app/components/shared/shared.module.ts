@@ -13,6 +13,8 @@ import { AccountComponent } from './account/account.component';
 import { RowCardComponent } from './row-card/row-card.component';
 import { LoadcountComponent } from './loadcount/loadcount.component';
 import { CalTableComponent } from './cal-table/cal-table.component';
+import { TabBillComponent } from './tab-bill/tab-bill.component';
+import { dateFormt } from 'src/app/pipes/date';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { CalTableComponent } from './cal-table/cal-table.component';
   RowCardComponent,
   LoadcountComponent,
   CalTableComponent,
+  TabBillComponent,
+  dateFormt
 ],
   imports: [
     CommonModule,
@@ -41,7 +45,8 @@ import { CalTableComponent } from './cal-table/cal-table.component';
     PanelDashboardComponent,
     FormPanelComponent,
     LoaderComponent,
-    AlertComponent
+    AlertComponent,
+    TabBillComponent
   ],
   providers: [],
   bootstrap: []

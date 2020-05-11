@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ApolloLink, concat } from 'apollo-link';
+import { ApolloLink } from 'apollo-link';
 import { InMemoryCache } from 'apollo-cache-inmemory'
 // modules
 import { app_routing } from './app-routing';
@@ -10,8 +10,7 @@ import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 // components
-import { AppComponent } from './app.component';
-// services without  
+import { AppComponent } from './app.component'; 
 
 @NgModule({
   declarations: [
