@@ -1,0 +1,9 @@
+{
+  "/api/*": {
+    "target": "https://jimmytest.now.sh/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+  
+}

@@ -1,0 +1,45 @@
+.panel {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  padding-bottom: 30px;
+  padding: 5px;
+  position: fixed;
+  right: 0;
+  top: 5px;
+  width: 100%;
+}
+
+.close {
+  align-self: flex-end;
+  display: inline-block;
+  margin: 10px;
+  outline: none;
+  position: relative;
+  width: 40px;
+}
+
+@media (min-width: 768px) {
+  .panel {
+    flex-direction: row;
+  }
+}
+
+.item  button{
+  background: none;
+  border: 1px rgb(160, 160, 160) solid;
+  color: rgb(177, 177, 177);
+  display: block;
+  font-size: 16px;
+  margin: 5px auto;
+  padding: 10px;
+  text-align: center;
+  width: 90%;
+}
+
+.display-form {
+  margin-top: 30px;
+}

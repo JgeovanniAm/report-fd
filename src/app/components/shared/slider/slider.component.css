@@ -1,0 +1,60 @@
+.subheader {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.subheader__month {
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin: 5px;
+}
+
+.content {
+  padding: 15px 0;
+  position: relative;
+}
+
+.arrow {
+  background: none;
+  border: 0;
+  margin: 10px 20px;
+  width: 35px;
+}
+
+.settings {
+  background: none;
+  border: 0;
+  opacity: .6;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 35px;
+}
+
+.settings img {
+  max-width: 100%;
+}
+
+
+@media (min-width: 768px) {
+
+  .subheader {
+    justify-content: left;
+  }
+
+  .settings {
+    right: 20px;
+    top: 20px;
+  }
+
+  .arrow {
+    margin: 10px 40px;
+  }
+}
+
+.jumbotron {
+  background:rgb(255, 255, 255);
+  box-shadow: 1px 1px 6px rgb(180, 180, 180);
+  position: relative;
+}

@@ -1,0 +1,19 @@
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" routerLink="home"><img src="assets/logo.png" alt="logo"></a>
+    <button (click)="handleClickLinks(nav)" id="toggle" class="navbar-toggler btn" type="button" data-toggle="collapse"
+      data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <img src="assets/menu2.png" alt="">
+    </button>
+    <div class="collapse navbar-collapse" #nav id="navbarNav">
+      <ul class="navbar-nav">
+        <li (click)="handleClickLinks(nav)" class="nav-item item">
+          <a class="nav-link" routerLink="dashboard">dashboard</a>
+        </li>
+        <li (click)="handleClickLinks(nav)" class="nav-item item">
+          <a class="nav-link" routerLink="bill">bill</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

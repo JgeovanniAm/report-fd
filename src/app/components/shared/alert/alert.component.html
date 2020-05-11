@@ -1,0 +1,13 @@
+<div [class.show-alert]="displayAlert" class="modal" tabindex="-1" role="dialog">
+  <div class="alert alert-success" role="alert">
+    <div class="alert-position">
+      <h4 class="alert-heading">Well done!</h4>
+      <button (click)="closeAlert()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div>
+      <pre>{{  item | json }}</pre>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">USD</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="getData()">
+    <tr *ngFor="let item of getData().incomes" #tr (click)="handleClick(tr, item)" class="incomes">
+      <td>{{item.title}}</td>
+      <td class="usd">{{item.CRC}}</td>
+    </tr>
+    <tr *ngFor="let item of getData().expenses" #tr (click)="handleClick(tr, item)" class="expense">
+      <td>{{item.title}}</td>
+      <td class="usd">{{item.CRC}}</td>
+    </tr>
+  </tbody>
+</table>
+<app-cal-table *ngIf="getData()" [result_byMonth]="getData()" ></app-cal-table>
+<app-row-card *ngIf="data_row" (closeEmit)="closeCard($event)" [data_card]="data_row"></app-row-card>
