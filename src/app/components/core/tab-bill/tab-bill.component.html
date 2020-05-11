@@ -17,17 +17,17 @@
         <tr *ngFor="let item of resultArrayTab.incomeByMonths" class="">
           <td>{{ item.title }}</td>
           <td>{{ item.CRC }}</td>
-          <td>{{ item.date | dateFormt }}</td>
+          <td style="font-size: 12px;">{{ item.date | dateFormt }}</td>
         </tr>
         <tr *ngFor="let item of resultArrayTab.expenses" class="">
           <td>{{ item.title }}</td>
           <td>{{ item.CRC }}</td>
-          <td>{{ item.date | dateFormt }}</td>
+          <td style="font-size: 12px;">{{ item.date | dateFormt }}</td>
         </tr>
       </tbody>
     </table>
   </div>
   <div class="caltablet-tab">
-    <p style="text-align: center;">Total: <span style="color: rgb(1, 128, 160);"><strong>${{ innerResultTable() }}</strong></span> </p>
+    <p>Total: <span style="color: rgb(32, 153, 1);"><strong>${{ innerResultTable() }}</strong></span> </p>
   </div>
 </div>

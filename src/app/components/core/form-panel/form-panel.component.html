@@ -47,4 +47,4 @@
 </div>
 <app-modal [message]="message" [displayModal]="displayModal" (closeModalEventEmit)="closeModal($event)"></app-modal>
 <app-alert [item]="item" [displayAlert]="displayAlert" (closeAlertEventEmit)="closeAlert($event)"></app-alert>
-<app-loader [load]="load"></app-loader>
+<app-loader *ngIf="load"></app-loader>

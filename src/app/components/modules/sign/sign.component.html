@@ -18,5 +18,5 @@
   <app-modal  [message]="message"  [displayModal]="displayModal" (closeModalEventEmit)="closeModal($event)"></app-modal>
 </div>
 
-<app-loader [load]="load"></app-loader>
+<app-loader *ngIf="load"></app-loader>
 

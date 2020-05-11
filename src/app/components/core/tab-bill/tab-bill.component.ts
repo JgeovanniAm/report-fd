@@ -15,7 +15,7 @@ interface Iprop {
 })
 export class TabBillComponent implements OnInit {
   private getAlldata: Observable<Object> = this.ProvidergqlService.getAllIncomeAndExpense().valueChanges;
-  public listTab: string[] = ['earnings', 'saving', 'gross annual'];
+  public listTab: string[] = ['earnings', 'saving', 'salary'];
   private typeContent: string = this.listTab[0];
   public resultArrayTab: Iprop | null = null;
   public keyResultArrayTab: string[]
@@ -48,7 +48,7 @@ export class TabBillComponent implements OnInit {
         }
         this.load = false;
       })
-    } else if (this.typeContent === 'gross annual') {
+    } else if (this.typeContent === 'salary') {
       this.getAlldata.subscribe(({ data }: Iprop | any) => {
         this.resultArrayTab = {
           incomeByMonths: data.incomeByMonths.filter(item => item.type == EnumType.SALARIO),

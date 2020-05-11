@@ -5,7 +5,7 @@
     <button (click)="nextDateSlider()" class="arrow"><img src="assets/next.svg" alt=""></button>
   </div>
   <div class="jumbotron">
-    <button (click)="handleClickSettings(panel)" class="settings"><img src="assets/settings.svg" alt=""></button>
+    <button (click)="handleClickSettings()" class="settings"><img src="assets/settings.svg" alt=""></button>
     <div class="content">
       <app-loadcount *ngIf="load"></app-loadcount>
       <app-account (refreshRequest)="closeCardAccounts($event)" [dataMonth]="statusDataMonth"></app-account>

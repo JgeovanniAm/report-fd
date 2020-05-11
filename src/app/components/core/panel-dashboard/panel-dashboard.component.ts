@@ -11,7 +11,7 @@ export class PanelDashboardComponent implements OnInit {
   public formState: string = 'expense';
 
   constructor() {
-    this.closePanelEventEmit = new EventEmitter()
+    this.closePanelEventEmit = new EventEmitter();
   }
 
   ngOnInit() { }

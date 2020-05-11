@@ -4,23 +4,21 @@ import { ApolloLink } from 'apollo-link';
 import { InMemoryCache } from 'apollo-cache-inmemory'
 // modules
 import { app_routing } from './app-routing';
-import { SharedModule } from './components/shared/shared.module';
-import { MainModule } from './components/main/main.module';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 // components
 import { AppComponent } from './app.component'; 
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     app_routing,
-    MainModule,
-    SharedModule,
     HttpClientModule,
     ApolloModule,
     HttpLinkModule

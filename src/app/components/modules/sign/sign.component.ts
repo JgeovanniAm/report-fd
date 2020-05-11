@@ -36,7 +36,7 @@ export class SignComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
-  public handleSubmit({ value }: FormGroup): void {
+  public handleSubmit({ value }: any): void {
     this.load = true
     this.HttpService.post(
       '/api/admin',

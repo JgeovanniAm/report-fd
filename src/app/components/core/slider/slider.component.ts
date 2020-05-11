@@ -9,23 +9,23 @@ import { IExpense, IIncomeBymonth } from 'src/app/interfaces';
   styleUrls: ['./slider.component.css']
 })
 export class SliderComponent implements OnInit {
-  private month: Array<string> = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
-  private currentYear: number = parseFloat(moment(new Date()).format("YYYY"))
+  private month: Array<string> = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+  private currentYear: number = parseFloat(moment(new Date()).format("YYYY"));
   private currentMonth: number = new Date().getMonth();
   public statusDataMonth: IExpense & IIncomeBymonth;
-  public showPanel = false
-  public load = false
+  public showPanel = false;
+  public load = false;
 
   constructor(private providergqlService: ProvidergqlService) {
-    this.providergqlService = providergqlService
+    this.providergqlService = providergqlService;
   }
 
   ngOnInit() {
-    this.getStatusMonth()
+    this.getStatusMonth();
   }
 
   handleClickSettings(): void {
-    this.showPanel = !this.showPanel
+    this.showPanel = !this.showPanel;
   }
 
   closePanel(event: boolean): void {
@@ -60,7 +60,7 @@ export class SliderComponent implements OnInit {
   }
 
   getDateSlider(): string {
-    const year = this.currentYear.toString().substr(2,4)
+    const year = this.currentYear.toString().substr(2, 4);
     return `${this.month[this.currentMonth]} ${year}`;
   }
 }

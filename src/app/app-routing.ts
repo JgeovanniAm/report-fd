@@ -1,26 +1,30 @@
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './components/main/home/home.component';
-import { DashboardComponent } from './components/main/dashboard/dashboard.component';
-import { BillComponent } from './components/main/bill/bill.component';
-import { SignComponent } from './components/main/sign/sign.component';
 
 
 const APP_ROUTES: Routes = [
   {
     path:'',
-    component: SignComponent,
+    loadChildren: () => {
+      return  import ('./components/modules/sign/sign.module').then(module => module.SignModule)
+    },
   },
   {
     path:'home',
-    component: HomeComponent,
+    loadChildren: () => {
+      return  import ('./components/modules/home/home.module').then(module => module.HomeModule)
+    },
   },
   {
     path:'dashboard',
-    component: DashboardComponent ,
+    loadChildren: () => {
+      return  import ('./components/modules/dashboard/dashboard.module').then(module => module.DashboardModule)
+    },
   },
   {
     path:'bill',
-    component: BillComponent,
+    loadChildren: () => {
+      return  import ('./components/modules/bill/bill.module').then(module => module.BillModule)
+    },
   },
   {
     path: '**',
@@ -29,4 +33,4 @@ const APP_ROUTES: Routes = [
   },
 ]
 
-export const app_routing = RouterModule.forRoot(APP_ROUTES, { useHash: true });
+export const app_routing = RouterModule.forRoot(APP_ROUTES);

@@ -24,12 +24,12 @@ export class RowCardComponent implements OnInit {
   ngOnInit() { }
 
   closeModalCard(): void {
-    this.data_card = null
+    this.data_card = null;
     if (!this.data_card) this.closeEmit.emit(this.data_card);
   }
 
   deleteItemCard(): void {
-    if (this.data_card['__typename']! in this.data_card) throw new Error("it has happened a error, _typename does'nt")
+    if (this.data_card['__typename']! in this.data_card) throw new Error("it has happened a error, _typename does'nt");
     try {
       if (this.data_card.__typename === "Expenses") {
         delete this.data_card.__typename;
@@ -43,7 +43,7 @@ export class RowCardComponent implements OnInit {
         });
       }
     } catch (err) {
-      throw new Error(err)
+      throw new Error(err);
     }
   }
 }

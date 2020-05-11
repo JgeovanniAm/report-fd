@@ -30,7 +30,7 @@ export class FormPanelComponent implements OnInit {
 
   ngOnInit() { }
 
-  handleSubmit(form: FormGroup): void {
+  handleSubmit(form:any): void {
     const { topic, description, expenseElem, titleElem, dateinput } = form.value;
     if (form.valid) {
       form.reset(); // reset value of main form
