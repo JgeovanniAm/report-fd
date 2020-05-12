@@ -10,7 +10,8 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 // components
 import { AppComponent } from './app.component'; 
 import { HeaderComponent } from './components/shared/header/header.component';
-import { SharedModule } from './components/shared/shared.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedModule } from './components/shared/shared.module';
     app_routing,
     HttpClientModule,
     ApolloModule,
-    HttpLinkModule
+    HttpLinkModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
 
