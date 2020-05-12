@@ -10,11 +10,12 @@ import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 // components
 import { AppComponent } from './app.component'; 
 import { HeaderComponent } from './components/shared/header/header.component';
+import { SharedModule } from './components/shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
