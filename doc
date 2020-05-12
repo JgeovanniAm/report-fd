@@ -1,2 +1,3 @@
 https://medium.com/codingthesmartway-com-blog/apollo-client-for-angular-making-use-of-graphql-8d9a571e020c
 https://itnext.io/choosing-a-highly-scalable-folder-structure-in-angular-d987de65ec7
+pwa: ng add @angular/pwa

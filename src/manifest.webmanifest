@@ -1,6 +1,7 @@
 {
-  "name": "project1",
+  "name": "report",
   "short_name": "report",
+  "orientation": "portrait",
   "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
