@@ -26,7 +26,7 @@ export class SignComponent implements OnInit {
 
   ngOnInit() {
     let token = localStorage.getItem('token')
-    token && this.HttpService.get('/api/access', token).toPromise().then(() => {
+    token && this.HttpService.get('https://jimmytest.now.sh/api/access', token).toPromise().then(() => {
       this.router.navigate(['/home']);
     })
   }
@@ -39,7 +39,7 @@ export class SignComponent implements OnInit {
   public handleSubmit({ value }: any): void {
     this.load = true
     this.HttpService.post(
-      '/api/admin',
+      'https://jimmytest.now.sh/api/admin',
       { user: value.userInput, password: value.passwordInput },
     ).toPromise()
     .then((result: IResponse) => {

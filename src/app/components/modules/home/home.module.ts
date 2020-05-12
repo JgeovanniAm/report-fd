@@ -21,4 +21,4 @@ import { HomeRoutingModule } from './home-routing.module';
   providers: [],
   bootstrap: []
 })
-export class HomeModule { }
+export  default class HomeModule { }

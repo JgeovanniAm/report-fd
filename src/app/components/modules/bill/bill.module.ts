@@ -23,4 +23,4 @@ import { SharedModule } from '../../shared/shared.module';
   providers: [],
   bootstrap: []
 })
-export class BillModule { }
+export default class BillModule { }

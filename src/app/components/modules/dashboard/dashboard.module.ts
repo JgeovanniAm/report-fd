@@ -36,4 +36,4 @@ import { SharedModule } from '../../shared/shared.module';
   providers: [],
   bootstrap: []
 })
-export class DashboardModule { }
+export default class DashboardModule { }

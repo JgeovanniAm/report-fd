@@ -34,7 +34,7 @@ export class AppModule {
     apollo: Apollo,
     httpLink: HttpLink
   ) {
-    const http = httpLink.create({ uri: '/api/reportgl' });
+    const http = httpLink.create({ uri: 'https://jimmytest.now.sh/api/reportgl' });
     
     const authMiddleware = new ApolloLink((operation, forward) => {
       // add the authorization to the headers

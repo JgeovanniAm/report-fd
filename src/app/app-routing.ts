@@ -1,30 +1,21 @@
 import { Routes, RouterModule } from '@angular/router';
 
-
 const APP_ROUTES: Routes = [
   {
     path: '',
-    loadChildren: () => {
-      return import('./components/modules/sign/sign.module').then(module => module.SignModule)
-    },
+    loadChildren: './components/modules/sign/sign.module',
   },
   {
     path: 'home',
-    loadChildren: () => {
-      return import('./components/modules/home/home.module').then(module => module.HomeModule)
-    },
+    loadChildren:'./components/modules/home/home.module',
   },
   {
     path: 'dashboard',
-    loadChildren: () => {
-      return import('./components/modules/dashboard/dashboard.module').then(module => module.DashboardModule)
-    },
+    loadChildren:'./components/modules/dashboard/dashboard.module',
   },
   {
     path: 'bill',
-    loadChildren: () => {
-      return import('./components/modules/bill/bill.module').then(module => module.BillModule)
-    },
+    loadChildren: './components/modules/bill/bill.module',
   },
   {
     path: '**',

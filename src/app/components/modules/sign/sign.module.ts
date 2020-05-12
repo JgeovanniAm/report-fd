@@ -25,4 +25,4 @@ import { SharedModule } from '../../shared/shared.module';
   providers: [],
   bootstrap: []
 })
-export class SignModule { }
+export default class SignModule { }
