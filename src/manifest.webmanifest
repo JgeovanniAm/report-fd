@@ -9,14 +9,14 @@
   "start_url": "./",
   "icons": [
     {
-      "src": "assets/icons/back.svg",
-      "sizes": "72x72",
+      "src": "assets/icons/logo.png",
+      "sizes": "256x256",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/logo.png",
-      "sizes": "256x256",
+      "src": "assets/icons/back.svg",
+      "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
     },
