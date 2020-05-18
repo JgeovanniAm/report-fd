@@ -1,30 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ApolloLink, concat } from 'apollo-link';
+import { ApolloLink } from 'apollo-link';
 import { InMemoryCache } from 'apollo-cache-inmemory'
 // modules
 import { app_routing } from './app-routing';
-import { SharedModule } from './components/shared/shared.module';
-import { MainModule } from './components/main/main.module';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { ApolloModule, Apollo } from 'apollo-angular';
 import { HttpLinkModule, HttpLink } from 'apollo-angular-link-http';
 // components
-import { AppComponent } from './app.component';
-// services without  
+import { AppComponent } from './app.component'; 
+import { HeaderComponent } from './components/shared/header/header.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     app_routing,
-    MainModule,
-    SharedModule,
     HttpClientModule,
     ApolloModule,
-    HttpLinkModule
+    HttpLinkModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [
 
@@ -36,7 +36,7 @@ export class AppModule {
     apollo: Apollo,
     httpLink: HttpLink
   ) {
-    const http = httpLink.create({ uri: '/api/reportgl' });
+    const http = httpLink.create({ uri: 'https://jimmytest.now.sh/api/reportgl' });
     
     const authMiddleware = new ApolloLink((operation, forward) => {
       // add the authorization to the headers

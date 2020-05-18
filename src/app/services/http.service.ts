@@ -33,7 +33,7 @@ export class HttpService {
 
   token(): void {
     const token = localStorage.getItem('token');
-    this.get('/api/access', token).toPromise().catch(err => {
+    this.get('https://jimmytest.now.sh/api/access', token).toPromise().catch(err => {
       this.router.navigate(['/'])
     })
   }

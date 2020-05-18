@@ -1,5 +1,5 @@
 {
-  "name": "project1",
+  "name": "report-fd",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -18,7 +18,9 @@
     "@angular/forms": "~8.2.14",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
+    "@angular/pwa": "^0.901.5",
     "@angular/router": "~8.2.14",
+    "@angular/service-worker": "~8.2.14",
     "apollo-angular": "^1.9.1",
     "apollo-angular-link-http": "^1.10.0",
     "apollo-cache-inmemory": "^1.6.5",

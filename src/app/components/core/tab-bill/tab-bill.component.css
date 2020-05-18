@@ -1,0 +1,34 @@
+.tab-bill {
+  margin-top: 20px;
+}
+
+.nav-button {
+  background: none;
+  border: 0;
+  color: rgb(90, 90, 90);
+  outline: none;
+  padding: 5px;
+  width: 90px;
+}
+
+.active-custom {
+  background: black;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.content-tab {
+  height: 230px;
+  margin: 25px 0;
+  overflow: auto;
+  position: relative;
+}
+
+.caltablet-tab p {
+  font-size: 20px;
+}
+
+td {
+  color: rgb(141, 141, 141);
+}

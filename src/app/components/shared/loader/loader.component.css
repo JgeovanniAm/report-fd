@@ -23,7 +23,7 @@
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #00f1ca;
+  background: rgb(8, 116, 143);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .center-position div:nth-child(1) {

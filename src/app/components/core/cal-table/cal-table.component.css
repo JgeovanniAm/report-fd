@@ -1,0 +1,14 @@
+.cal {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 10px;
+}
+
+.cal p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.is-negative {
+  color: red;
+}

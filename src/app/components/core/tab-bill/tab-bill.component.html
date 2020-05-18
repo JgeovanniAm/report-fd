@@ -1,0 +1,33 @@
+<div class="tab-bill">
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item" *ngFor="let item of listTab">
+      <button #elem class="nav-button" data-tab-id="item" (click)="handleClickTab(elem)"
+        [class.active-custom]="item ==='earnings'">{{ item }}</button>
+    </li>
+  </ul>
+  <div class="content-tab">
+    <app-loadcount *ngIf="load"></app-loadcount>
+    <table *ngIf="resultArrayTab" class="table">
+      <thead>
+        <tr>
+          <th *ngFor="let key of keyResultArrayTab" scope="col">{{key}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of resultArrayTab.incomeByMonths" class="">
+          <td>{{ item.title }}</td>
+          <td>{{ item.CRC }}</td>
+          <td style="font-size: 12px;">{{ item.date | dateFormt }}</td>
+        </tr>
+        <tr *ngFor="let item of resultArrayTab.expenses" class="">
+          <td>{{ item.title }}</td>
+          <td>{{ item.CRC }}</td>
+          <td style="font-size: 12px;">{{ item.date | dateFormt }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="caltablet-tab">
+    <p>Total: <span style="color: black"><strong>${{ innerResultTable() }}</strong></span> </p>
+  </div>
+</div>

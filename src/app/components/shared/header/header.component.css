@@ -4,8 +4,8 @@
 
 .navbar-brand {
   display: block;
-  width: 90px;
   height: 90px;
+  width: 90px;
 }
 
 .navbar-brand img {
@@ -19,9 +19,9 @@
 .btn {
   background: none;
   border: 0;
-  padding: 0;
-  margin-left: 30px ;
   margin-bottom: 10px;
+  margin-left: 30px ;
+  padding: 0;
 }
 
 .btn img {
