@@ -22,6 +22,10 @@
   width: 35px;
 }
 
+.arrow img {
+  max-width: 100%;
+}
+
 .settings {
   background: none;
   border: 0;

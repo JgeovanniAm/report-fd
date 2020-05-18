@@ -1,6 +1,6 @@
 {
-  "name": "report",
-  "short_name": "report",
+  "name": "Report Jimmy",
+  "short_name": "Report",
   "orientation": "portrait",
   "theme_color": "#000000",
   "background_color": "#000000",
@@ -17,7 +17,7 @@
     {
       "src": "assets/icons/back.svg",
       "sizes": "72x72",
-      "type": "image/png",
+      "type": "image/svg+xml",
       "purpose": "maskable any"
     },
     {
@@ -28,8 +28,14 @@
     },
     {
       "src": "assets/icons/next.svg",
-      "sizes": "144x144",
-      "type": "image/png",
+      "sizes": "72x72",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "assets/icons/settings.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
       "purpose": "maskable any"
     }
   ]

@@ -29,7 +29,6 @@ export class ProvidergqlService {
       },
       fetchPolicy: 'no-cache',
       errorPolicy: 'ignore',
-
     })
   }
 
