@@ -74,7 +74,7 @@ export class TabBillComponent implements OnInit {
   innerResultTable(): number {
     if (this.resultArrayTab) {
       const { incomeByMonths, expenses } = this.resultArrayTab;
-      return Math.abs(this.getCalTable(incomeByMonths) - this.getCalTable(expenses));
+      return this.getCalTable(incomeByMonths) - this.getCalTable(expenses);
     } else return 0
   }
 }
