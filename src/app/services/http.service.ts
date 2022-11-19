@@ -10,6 +10,7 @@ export class HttpService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Access-Control-Allow-Origin': '*',
+      'content-type': 'application/json'
     })
   };
 
